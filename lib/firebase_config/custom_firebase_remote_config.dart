@@ -29,6 +29,7 @@ class CustomFirebaseRemoteConfig {
             fetchTimeout: const Duration(seconds: 10),
             minimumFetchInterval: Duration.zero),
       );
+      await _firebaseRemoteConfig.fetchAndActivate();
     } on PlatformException catch (e) {
       throw (e.toString());
     } catch (e) {
